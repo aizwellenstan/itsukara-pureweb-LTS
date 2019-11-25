@@ -109,7 +109,7 @@ export const Banner = React.memo(() => {
 
       <Toolbox>
         <a
-          href="https://twitter.com/thegodofneet"
+          href="#"
           target="__blank"
           rel="noreferrer"
           title={t('banner.view_twitter', {
@@ -123,7 +123,7 @@ export const Banner = React.memo(() => {
         </a>
 
         <a
-          href="https://github.com/neet/refined-itsukara-link"
+          href="https://github.com/aizwellenstan/itsukara-pureweb"
           target="__blank"
           rel="noreferrer"
           title={t('banner.view_source', { defaultValue: 'View Source' })}
