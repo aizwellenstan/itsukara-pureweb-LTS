@@ -27,4 +27,4 @@ app.use('/sw.js', (_, res) => res.sendFile(path.resolve(staticDir, 'sw.js')));
 // SPA
 app.use('/*', (_, res) => res.sendFile(path.resolve(staticDir, 'index.html')));
 
-app.listen(APP_PORT);
+app.listen(process.env.PORT || APP_PORT);
