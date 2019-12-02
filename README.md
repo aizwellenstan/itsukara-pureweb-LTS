@@ -4,7 +4,7 @@
 
 <img src="https://raw.githubusercontent.com/neet/refined-itsukara-link/master/public/screenshot.png" alt="Screenshot">
 
-<p align="center">✨ itsukara.link with refined interface! ✨</p>
+<p align="center">✨ itsukara.link with refined interface!✨</p>
 
 <p align="center">
   <a href="https://travis-ci.com/neet/refined-itsukara-link"><img src="https://travis-ci.com/neet/refined-itsukara-link.svg?branch=master" alt="Build Status" /></a>
