@@ -103,7 +103,7 @@ export const Banner = React.memo(() => {
         <Link to="/">
           <Title>itsukara</Title>
           {/* <LogoLarge src={logoLarge} alt="itsukara" /> */}
-          <LogoLarge src={logoSmall} alt="itsukara" /><span>いつから</span>
+          <LogoLarge src={logoSmall} alt="itsukara" />
           <LogoSmall src={logoSmall} alt="itsukara" />
         </Link>
       </Hgroup>
