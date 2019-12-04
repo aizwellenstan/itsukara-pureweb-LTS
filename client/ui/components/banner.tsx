@@ -101,7 +101,7 @@ export const Banner = React.memo(() => {
     <Wrapper>
       <Hgroup>
         <Link to="/">
-          <Title>Refined itsukara.link</Title>
+          <Title>itsukara</Title>
           <LogoLarge src={logoLarge} alt="Refined itsukara.link" />
           <LogoSmall src={logoSmall} alt="Refiend itsukara.link" />
         </Link>
