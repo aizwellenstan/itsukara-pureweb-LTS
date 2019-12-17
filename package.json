@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Refined itsukara.link",
   "main": "./dist/main.js",
-  "author": "Ryo Igarashi <n33t5hin@gmail.com>",
+  "author": "",
   "license": "AGPL-3.0",
   "scripts": {
     "start": "node ./dist/main.js",
