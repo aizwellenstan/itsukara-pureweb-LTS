@@ -1,9 +1,3 @@
-<h1 align="center">
-  <img src="https://raw.githubusercontent.com/neet/refined-itsukara-link/master/client/assets/logo-large.png" alt="Refined itsukara.link" width="300px"/>
-</h1>
-
-<img src="https://raw.githubusercontent.com/neet/refined-itsukara-link/master/public/screenshot.png" alt="Screenshot">
-
 <p align="center">✨ itsukara.link with refined interface!✨</p>
 
 <p align="center">
