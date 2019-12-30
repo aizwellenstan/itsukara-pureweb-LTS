@@ -9,8 +9,6 @@ const staticDir = path.resolve(__dirname, '../../static');
 // Bind /api/* to original API server
 router.use('/api', (req, res) => {
   const boundPath = `${RESOURCE_PROTOCOL}://${RESOURCE_HOST}${req.path}`;
-  // eslint-disable-next-line no-console
-  console.log(boundPath);
   req.pipe(request(boundPath)).pipe(res);
 });
 
