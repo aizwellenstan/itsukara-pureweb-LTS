@@ -6,14 +6,16 @@ import { configureStore } from './redux/store';
 import { BrowserRouter } from 'react-router-dom';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 
-const mountNode = document.getElementById('root');
-const store = configureStore();
+(async () => {
+  if (process.env.NODE_ENV === 'production') {
+    OfflinePluginRuntime.install();
+  }
 
-if (process.env.NODE_ENV === 'production') {
-  OfflinePluginRuntime.install();
-}
+  const mountNode = document.getElementById('root');
+  if (!mountNode) return;
 
-if (mountNode) {
+  const store = configureStore();
+
   ReactDOM.render(
     <StoreContext.Provider value={store}>
       <BrowserRouter>
@@ -22,4 +24,4 @@ if (mountNode) {
     </StoreContext.Provider>,
     mountNode,
   );
-}
+})();
