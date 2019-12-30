@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.backgroundNormal};
 `;
 
-export const Root: React.SFC = React.memo(() => {
+export const Root = () => {
   return (
     <I18nextProvider i18n={locale}>
       <ThemeProvider theme={theme}>
@@ -36,4 +36,4 @@ export const Root: React.SFC = React.memo(() => {
       </ThemeProvider>
     </I18nextProvider>
   );
-});
+};
