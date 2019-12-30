@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ThemeProvider, styled } from 'client/ui/styles';
 import { I18nextProvider } from 'react-i18next';
 import { Switch, Redirect, Route } from 'react-router-dom';
+// import NoSSR from 'react-no-ssr';
 import { getLocale } from 'client/ui/locales';
 import { theme } from 'client/ui/styles/theme';
 import { Events } from 'client/ui/views/events';
@@ -10,30 +11,43 @@ import { GlobalStyle } from './global-style';
 
 const locale = getLocale();
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
   display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: ${({ theme }) => theme.backgroundNormal};
+  background-color: ${({ theme }) => theme.backgroundWash};
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;
 
 export const Root = () => {
   return (
-    <I18nextProvider i18n={locale}>
-      <ThemeProvider theme={theme}>
-        <Wrapper>
-          <Banner />
+    <>
+      <I18nextProvider i18n={locale}>
+        <ThemeProvider theme={theme}>
+          <Wrapper>
+            <Content>
+              <Banner />
 
-          <Switch>
-            <Redirect exact from="/" to="/events" />
-            <Route path="/events" component={Events} />
-          </Switch>
+              <Switch>
+                <Redirect exact from="/" to="/events" />
+                <Route path="/events" component={Events} />
+              </Switch>
+            </Content>
+          </Wrapper>
 
           <GlobalStyle />
-        </Wrapper>
-      </ThemeProvider>
-    </I18nextProvider>
+
+          {/* <NoSSR>
+            <GettingStarted />
+          </NoSSR> */}
+        </ThemeProvider>
+      </I18nextProvider>
+    </>
   );
 };

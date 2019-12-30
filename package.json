@@ -102,7 +102,9 @@
     "use-react-router": "^1.0.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
-    "webpack-notifier": "^1.7.0"
+    "webpack-notifier": "^1.7.0",
+    "@types/react-no-ssr": "^1.1.1",
+    "react-no-ssr": "^1.1.0"
   },
   "devDependencies": {
     "@redux-saga/testing-utils": "^1.0.2",
