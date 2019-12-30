@@ -27,4 +27,8 @@ app.use('/sw.js', (_, res) => res.sendFile(path.resolve(staticDir, 'sw.js')));
 // SPA
 app.use('/*', (_, res) => res.sendFile(path.resolve(staticDir, 'index.html')));
 
-app.listen(process.env.PORT || APP_PORT);
+// app.listen(process.env.PORT || APP_PORT);
+app.listen(process.env.PORT || { port: APP_PORT }, () => {
+  // eslint-disable-next-line no-console
+  console.log('🎉 Server is running at ' + `http://localhost:${APP_PORT}`);
+});
