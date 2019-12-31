@@ -1,16 +1,8 @@
 import * as path from 'path';
 import * as express from 'express';
-import * as request from 'request';
-import { RESOURCE_HOST, RESOURCE_PROTOCOL } from '../config';
 
 const router = express.Router();
 const staticDir = path.resolve(__dirname, '../../static');
-
-// Bind /api/* to original API server
-router.use('/api', (req, res) => {
-  const boundPath = `${RESOURCE_PROTOCOL}://${RESOURCE_HOST}${req.path}`;
-  req.pipe(request(boundPath)).pipe(res);
-});
 
 // Service worker
 router.use('/sw.js', (_, res) => {

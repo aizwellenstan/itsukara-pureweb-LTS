@@ -3,24 +3,24 @@ import { styled } from 'client/ui/styles';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { bannerHeight } from 'client/ui/styles/constants';
-import logoLarge from 'client/assets/logo-large.png';
+// import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import logoSmall from 'client/assets/logo-small.png';
+import { BANNER } from 'client/ui/styles/z-indices';
 import { Link } from 'react-router-dom';
 
 const Wrapper = styled.header`
   display: flex;
   position: relative;
-  z-index: 999;
+  z-index: ${BANNER};
   box-sizing: border-box;
   flex: 0 0 auto;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
-  height: ${bannerHeight};
-  padding: 8px 18px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  height: 50px;
+  padding: 8px 14px;
+  border-bottom: 1px solid ${({ theme }) => theme.borderNormal};
+  background-color: ${({ theme }) => theme.backgroundNormal};
 `;
 
 const LogoSmall = styled.img`
@@ -109,7 +109,7 @@ export const Banner = React.memo(() => {
       </Hgroup>
 
       <Toolbox>
-        <a
+        {/* <a
           href="#"
           target="__blank"
           rel="noreferrer"
@@ -121,7 +121,7 @@ export const Banner = React.memo(() => {
           })}
         >
           <Icon icon={faTwitter} />
-        </a>
+        </a> */}
 
         <a
           href="https://github.com/aizwellenstan/itsukara-pureweb"
