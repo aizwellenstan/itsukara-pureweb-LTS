@@ -19,7 +19,7 @@
     "build:client": "webpack --mode=production",
     "watch": "run-p watch:*",
     "watch:client": "webpack-dev-server --mode=development",
-    "watch:server": "ts-node server/src/main.ts",
+    "watch:server": "ts-node server/main.ts",
     "manage:translations": "i18next-scanner 'client/**/*.{ts,tsx}' --config=i18next-scanner.config.js"
   },
   "husky": {
